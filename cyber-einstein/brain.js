@@ -4,29 +4,29 @@ let talkTime = 2000;
 
 function listen() {
 	if (isListening === false){
-		document.getElementById("button").style.backgroundImage = "url(/squarepix.png)";
-		document.getElementById("rec").style.backgroundImage = "url(/recpix.gif)";
+		document.getElementById("button").style.backgroundImage = "url(/cyber-einstein/squarepix.png)";
+		document.getElementById("rec").style.backgroundImage = "url(/cyber-einstein/recpix.gif)";
 		isListening = true;
 	} else{
-		document.getElementById("button").style.backgroundImage = "url(/circlepix.png)";
+		document.getElementById("button").style.backgroundImage = "url(/cyber-einstein/circlepix.png)";
 		document.getElementById("rec").style.backgroundImage = "";
 		isListening = false;
 	};
 };
 
 function talk() {
-	document.getElementsByClassName("ein")[0].src = "/einstein_talk.gif";
+	document.getElementsByClassName("ein")[0].src = "/cyber-einstein/einstein_talk.gif";
 	setTimeout(() => {
-		document.getElementsByClassName("ein")[0].src = "/einstein.png";
+		document.getElementsByClassName("ein")[0].src = "/cyber-einstein/einstein.png";
 		}, talkTime)
 };
 
 function think() {
-	document.getElementsByClassName("ein")[0].src = "/einstein_closed.png";
+	document.getElementsByClassName("ein")[0].src = "/cyber-einstein/einstein_closed.png";
 }
 
 function reset(){
-	document.getElementsByClassName("ein")[0].src = "/einstein.png"
+	document.getElementsByClassName("ein")[0].src = "/cyber-einstein/einstein.png"
 }
 
 document.addEventListener("keypress", function(event) {
