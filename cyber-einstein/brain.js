@@ -1,6 +1,6 @@
 let isListening = false;
 
-let talkTime = 2000;
+let speakTime = 2000;
 
 function listen() {
 	if (isListening === false){
@@ -14,11 +14,11 @@ function listen() {
 	};
 };
 
-function talk() {
+function speak() {
 	document.getElementsByClassName("ein")[0].src = "/cyber-einstein/einstein_talk.gif";
 	setTimeout(() => {
 		document.getElementsByClassName("ein")[0].src = "/cyber-einstein/einstein.png";
-		}, talkTime)
+		}, speakTime)
 };
 
 function think() {
@@ -29,28 +29,48 @@ function reset(){
 	document.getElementsByClassName("ein")[0].src = "/cyber-einstein/einstein.png"
 }
 
+function setSpeakTime(){
+	speakTime = document.getElementById("speakTimeInput").value;
+}
+
+function hideControls(){
+	document.getElementById("controls").style.display = "none";
+}
+
+function unhideControls(){
+	document.getElementById("controls").style.display = "block";
+}
+
 document.addEventListener("keypress", function(event) {
   if (event.key == 't') {
     think();
   }
   if (event.key == 's') {
-    talk();
+    speak();
   }
   if (event.key == 'r') {
     reset();
   }
+  if (event.key == 'h') {
+    hideControls();
+  }
+  if (event.key == 'u') {
+    unhideControls();
+  }
 });
 
 
+//cursor
 
-function readCookie(name) {
-	if (document.cookie !== '') {
-	    let allCookies = document.cookie.split('; ');
-		let expected = name + '=true';
-		if (allCookies.find(row => row.startsWith(name)) === expected) {
-			let cookieValue = allCookies.find(row => row.startsWith(name)).split('=')[1];
-	        return cookieValue;
-		} else{
-			return false;
-	}}
+const cursorRounded = document.querySelector('.rounded');
+
+
+const moveCursor = (e)=> {
+  const mouseY = e.clientY;
+  const mouseX = e.clientX;
+   
+  cursorRounded.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+ 
 }
+
+window.addEventListener('mousemove', moveCursor)

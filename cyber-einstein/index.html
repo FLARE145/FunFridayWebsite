@@ -3,15 +3,25 @@
     <head>
 	  <title>CYBEREINSTEIN</title>
       <link rel="stylesheet" href="style.css">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
       <main>
+	    <div class="cursor rounded"></div>
 		<figure>
 		    <img src="/cyber-einstein/einstein.png" class="ein">
 		</figure>
-		<div id="button" onclick="listen()">
+		<div id="button" onclick="listen()" class="noHighlight">
 		</div>
 		<div id="rec">
+		</div>
+		<div id="controls">
+		  <textarea id="speakTimeInput">2000</textarea>
+		  <div class="button" onclick="hideControls()"><b style="color:blue;">h</b>ide</div>
+		  <div class="button" onclick="setSpeakTime()">set</div>
+		  <div class="button" onclick="think()"><b style="color:blue;">t</b>hink</div>
+		  <div class="button" onclick="reset()"><b style="color:blue;">r</b>eset</div>
+		  <div class="button" onclick="speak()"><b style="color:blue;">s</b>peak</div>
 		</div>
       </main>
 	  <script src="/cyber-einstein/brain.js"></script>
