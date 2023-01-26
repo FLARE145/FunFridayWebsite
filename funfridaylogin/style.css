@@ -1,0 +1,58 @@
+body {
+  background-color: #000c2c;
+  background-image: url(/funfridaylogin/bg.gif);
+  background-size: cover;
+  overflow:overlay;
+  cursor: none;
+  filter: drop-shadow(5px 4px 14px #9a30a36e) drop-shadow(5px 4px 14px black)
+}
+
+#logo {
+  width:25%;
+  margin-left: auto;
+  margin-right: auto;
+  filter: brightness(1.5);
+}
+
+#flex {
+  display: flex;
+}
+
+.input {
+  width: 300px;
+  height: 25px;
+  background-color: #0008a178;
+  color: yellow;
+  border-color: black;
+  font-size: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 70px;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+  cursor: none;
+}
+
+.mid {
+  width: 483px;
+  height: 100px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  /*filter: blur(1px) brightness(1.5);*/
+  overflow: hidden;
+}
+
+.rounded{
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  background-image: url(/funfridaylogin/mouse.png);
+}
+
+p {
+  color: #1b9377;
+}
+
+}
